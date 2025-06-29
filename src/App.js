@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Btn from './components/Btn';
 import ModeToggler from './components/ModeToggler';
+import { useState } from 'react';
 
 function Header() {
   return (
@@ -26,6 +27,14 @@ function Example(props) {
 
 
 function App() {
+    const [darkModeOn, setDarkModeOn] = useState(false);
+    const darkModeOnText = "Dark Mode On";
+    const lightModeText = "Light Mode On";
+
+    const toggleDarkMode = () => {
+        // Logic to toggle dark mode
+        setDarkModeOn(!darkModeOn);
+    };
     return (
         <div className="App">
             <Example
@@ -34,7 +43,8 @@ function App() {
                 str={str1 + ' another ' + 'string'}
             />
             <Btn />
-            <ModeToggler />
+            <ModeToggler darkModeOn={darkModeOn} darkModeOnText={darkModeOnText} lightModeText={lightModeText} />
+            <button onClick={toggleDarkMode}> Change the Mode</button>
         </div>
     );
 }
