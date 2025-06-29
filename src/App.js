@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Btn from './components/Btn';
 
 function Header() {
   return (
@@ -31,6 +32,7 @@ function App() {
                 math={(10 + 20) / 3}
                 str={str1 + ' another ' + 'string'}
             />
+            <Btn />
         </div>
     );
 }
