@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Btn from './components/Btn';
+import ModeToggler from './components/ModeToggler';
 
 function Header() {
   return (
@@ -33,6 +34,7 @@ function App() {
                 str={str1 + ' another ' + 'string'}
             />
             <Btn />
+            <ModeToggler />
         </div>
     );
 }
